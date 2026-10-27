@@ -1,0 +1,31 @@
+{
+  "name": "designlang",
+  "displayName": "designlang",
+  "description": "Extract any website's design language — colours, typography, spacing, motion, components — into W3C DTCG tokens, Tailwind/shadcn themes, Figma variables, graded report cards, remixes and brand books. Ships fourteen slash commands and the extract-design skill.",
+  "version": "13.3.2",
+  "author": {
+    "name": "Manavarya Singh",
+    "url": "https://github.com/Manavarya09"
+  },
+  "homepage": "https://github.com/osa822630-droid/design-extract",
+  "repository": "https://github.com/osa822630-droid/design-extract",
+  "license": "MIT",
+  "keywords": [
+    "design-system",
+    "design-tokens",
+    "dtcg",
+    "tailwind",
+    "shadcn",
+    "figma",
+    "typography",
+    "colors",
+    "motion",
+    "grade",
+    "battle",
+    "remix",
+    "pack",
+    "site",
+    "studio",
+    "verify"
+  ]
+}

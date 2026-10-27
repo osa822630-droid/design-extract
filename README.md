@@ -229,13 +229,24 @@ behind proxies. `install-browser` fetches the Chromium matching the bundled
 Playwright (add `--with-deps` on bare Linux). Without it, designlang falls back
 to an installed Google Chrome.
 
+## Use in Claude (web / claude.ai)
+
+This repo is a plugin marketplace that claude.ai can add directly. In
+**Customize → Plugins → Add → Add marketplace → Add from a repository**, enter
+`osa822630-droid/design-extract` (or the full repository URL). Then add the
+`designlang` plugin from that marketplace. The plugin lives in
+[`plugins/designlang/`](plugins/designlang/) — a self-contained folder with its
+own `.claude-plugin/plugin.json`, so claude.ai syncs it without pulling in the
+CLI (`bin/`), the website or the test suite. After pushing changes to `main`,
+use **Check for updates** on the marketplace to re-sync it.
+
 ## Use in Claude Code (plugin)
 
 designlang ships as a **Claude Code plugin** — eleven slash commands that wrap
 the CLI. Install it from inside Claude Code:
 
 ```text
-/plugin marketplace add Manavarya09/design-extract
+/plugin marketplace add osa822630-droid/design-extract
 /plugin install designlang@designlang
 ```
 
@@ -497,7 +508,7 @@ designlang ships surfaces beyond the CLI:
 Drop designlang straight into Claude Code as a plugin. Every CLI command becomes a slash command:
 
 ```bash
-/plugin install Manavarya09/design-extract
+/plugin install osa822630-droid/design-extract
 ```
 
 Then inside any Claude Code session:
@@ -510,7 +521,7 @@ Then inside any Claude Code session:
 | `/remix <url> --as <vocab>` | Restyle in brutalist / swiss / art-deco / cyberpunk / soft-ui / editorial |
 | `/pack <url>` | Bundle every output into one design-system directory |
 
-Manifest: [`.claude-plugin/plugin.json`](.claude-plugin/plugin.json) · marketplace: [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) · commands: [`commands/`](commands/) · skills: [`skills/`](skills/).
+Manifest: [`plugins/designlang/.claude-plugin/plugin.json`](plugins/designlang/.claude-plugin/plugin.json) · marketplace: [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) · commands: [`plugins/designlang/commands/`](plugins/designlang/commands/) · skills: [`plugins/designlang/skills/`](plugins/designlang/skills/).
 
 ## Agent skill (other ecosystems)
 
